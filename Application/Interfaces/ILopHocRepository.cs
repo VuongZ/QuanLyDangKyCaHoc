@@ -6,7 +6,7 @@ namespace finalproject.Application.Interfaces
     {
         Task<IEnumerable<LopHoc>> GetAllLopHocsAsync();
         Task<LopHoc> GetLopHocByIdAsync(int id);
-        Task AddLopHocAsync(LopHoc lopHoc);
+        Task<int> AddLopHocAsync(LopHoc lopHoc);
         Task UpdateLopHocAsync(LopHoc lopHoc);
         Task DeleteLopHocAsync(int id);
     }

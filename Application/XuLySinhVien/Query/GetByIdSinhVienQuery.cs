@@ -1,7 +1,7 @@
 using finalproject.Domain.Entities;
 using MediatR;
 
-namespace finalproject.Application.Product.Query
+namespace finalproject.Application.XuLySinhVien.Query
 {
    public class GetByIdSinhVienQuery : IRequest<SinhVien>
     {

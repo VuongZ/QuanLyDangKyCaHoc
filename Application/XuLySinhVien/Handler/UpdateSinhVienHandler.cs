@@ -1,8 +1,8 @@
 using finalproject.Application.Interfaces;
-using finalproject.Application.Product.Command;
+using finalproject.Application.XuLySinhVien.Command;
 using MediatR;
 
-namespace finalproject.Application.Product.Handler
+namespace finalproject.Application.XuLySinhVien.Handler
 {
    public class UpdateSinhVienHandler : IRequestHandler<UpdateSinhVienCommand, bool>
     {

@@ -1,9 +1,9 @@
 using finalproject.Application.Interfaces;
-using finalproject.Application.Product.Query;
+using finalproject.Application.XuLySinhVien.Query;
 using finalproject.Domain.Entities;
 using MediatR;
 
-namespace finalproject.Application.Product.Handler
+namespace finalproject.Application.XuLySinhVien.Handler
 {
     public class GetAllSinhVienHandler : IRequestHandler<GetALLSinhVienQuery, IEnumerable<SinhVien>>
     {

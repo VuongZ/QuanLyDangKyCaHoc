@@ -1,5 +1,5 @@
 using MediatR;
-namespace finalproject.Application.Product.Command
+namespace finalproject.Application.XuLySinhVien.Command
 {
     public class CreateSinhVienCommand : IRequest<int>
     {
