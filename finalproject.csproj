@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <Protobuf Include="Presentation/Protos/sinhvien.proto" GrpcServices="Server" />
+     <Protobuf Include="Presentation/Protos/LopHoc.proto" GrpcServices="Server" />
+      <Protobuf Include="Presentation/Protos/DangKy.proto" GrpcServices="Server" />
   </ItemGroup>
 
   <ItemGroup>

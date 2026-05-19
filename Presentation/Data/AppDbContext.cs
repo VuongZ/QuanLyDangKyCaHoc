@@ -16,7 +16,7 @@ public partial class AppDbContext : DbContext
     {
     }
 
-    public virtual DbSet<DangKy> DangKies { get; set; }
+    public virtual DbSet<DangKy> DangKy { get; set; }
 
     public virtual DbSet<LopHoc> LopHocs { get; set; }
 

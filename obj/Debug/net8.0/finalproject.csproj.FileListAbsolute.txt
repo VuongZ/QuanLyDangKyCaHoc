@@ -146,3 +146,5 @@ D:\dotnet\finalproject\obj\Debug\net8.0\finalproject.genruntimeconfig.cache
 D:\dotnet\finalproject\obj\Debug\net8.0\ref\finalproject.dll
 D:\dotnet\finalproject\bin\Debug\net8.0\Grpc.AspNetCore.Server.Reflection.dll
 D:\dotnet\finalproject\bin\Debug\net8.0\Grpc.Reflection.dll
+D:\dotnet\finalproject\bin\Debug\net8.0\package-lock.json
+D:\dotnet\finalproject\obj\Debug\net8.0\finalproject.sourcelink.json

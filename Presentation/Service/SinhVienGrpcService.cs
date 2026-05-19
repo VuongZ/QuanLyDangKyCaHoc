@@ -12,7 +12,7 @@ namespace finalproject.Presentation.Service
         }
         public override async Task<GetAllSinhViensResponse> GetAllSinhViens(GetAllSinhViensRequest request, ServerCallContext context)
         {
-            var query = new Application.Product.Query.GetALLSinhVienQuery();
+            var query = new Application.XuLySinhVien.Query.GetALLSinhVienQuery();
             var sinhViens = await _mediator.Send(query);
             var response = new GetAllSinhViensResponse();
             response.SinhViens.AddRange(sinhViens.Select(s => new SinhVien
@@ -26,7 +26,7 @@ namespace finalproject.Presentation.Service
         }
         public override async Task<SinhVienResponse> GetSinhVienById(GetSinhVienByIdRequest request, ServerCallContext context)
         {
-            var query = new Application.Product.Query.GetByIdSinhVienQuery { Id = request.Id };
+            var query = new Application.XuLySinhVien.Query.GetByIdSinhVienQuery { Id = request.Id };
             var sinhVien = await _mediator.Send(query);
             if (sinhVien == null)
             {
@@ -41,7 +41,7 @@ namespace finalproject.Presentation.Service
         }
         public override async Task<CreateSinhVienResponse> CreateSinhVien(CreateSinhVienRequest request, ServerCallContext context)
         {
-            var command = new Application.Product.Command.CreateSinhVienCommand
+            var command = new Application.XuLySinhVien.Command.CreateSinhVienCommand
             {
                 Tensv = request.Tensv,
                 MaSv = request.Mssv
@@ -51,7 +51,7 @@ namespace finalproject.Presentation.Service
         }
         public override async Task<UpdateSinhVienResponse> UpdateSinhVien(UpdateSinhVienRequest request, ServerCallContext context)
         {
-            var command = new Application.Product.Command.UpdateSinhVienCommand
+            var command = new Application.XuLySinhVien.Command.UpdateSinhVienCommand
             {
                 Id = request.Id,
                 Tensv = request.Tensv,
@@ -62,7 +62,7 @@ namespace finalproject.Presentation.Service
         } 
         public override async Task<DeleteSinhVienResponse> DeleteSinhVien(DeleteSinhVienRequest request, ServerCallContext context)
         {
-            var command = new Application.Product.Command.DeleteSinhVienCommand
+            var command = new Application.XuLySinhVien.Command.DeleteSinhVienCommand
             {
                 Id = request.Id
             };

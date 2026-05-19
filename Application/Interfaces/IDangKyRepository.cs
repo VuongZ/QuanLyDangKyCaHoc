@@ -5,9 +5,9 @@ namespace   finalproject.Application.Interfaces
     public interface IDangKyRepository
     {
         Task<IEnumerable<DangKy>> GetAllDangKiesAsync();
-        Task<DangKy> GetDangKyByIdAsync(int id);
-        Task<int> AddDangKyAsync(DangKy dangKy);
+        Task<DangKy> GetDangKyByIdAsync(int idLop, int idSinhVien);
+        Task AddDangKyAsync(DangKy dangKy);
         Task UpdateDangKyAsync(DangKy dangKy);
-        Task DeleteDangKyAsync(int id);
+        Task DeleteDangKyAsync(int idLop, int idSinhVien);
     }
 }

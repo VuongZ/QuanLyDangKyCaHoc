@@ -1,0 +1,2 @@
+obj\Debug\net8.0\Presentation\Protos/DangKy.cs \
+obj\Debug\net8.0\Presentation\Protos/DangKyGrpc.cs: Presentation/Protos/DangKy.proto

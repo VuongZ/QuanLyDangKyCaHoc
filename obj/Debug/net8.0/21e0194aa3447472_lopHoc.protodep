@@ -1,0 +1,2 @@
+obj\Debug\net8.0\Presentation\Protos/LopHoc.cs \
+obj\Debug\net8.0\Presentation\Protos/LopHocGrpc.cs: Presentation/Protos/LopHoc.proto

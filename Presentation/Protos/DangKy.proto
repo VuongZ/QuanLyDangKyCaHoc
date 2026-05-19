@@ -1,0 +1,54 @@
+syntax = "proto3";
+option csharp_namespace = "finalproject.Presentation.Protos";
+service DangKyGrpc {
+  rpc GetAllDangKies (GetAllDangKiesRequest) returns (GetAllDangKiesResponse);
+  rpc GetDangKyById (GetDangKyByIdRequest) returns (DangKyResponse);
+  rpc CreateDangKy (CreateDangKyRequest) returns (CreateDangKyResponse);
+  rpc UpdateDangKy (UpdateDangKyRequest) returns (UpdateDangKyResponse);
+  rpc DeleteDangKy (DeleteDangKyRequest) returns (DeleteDangKyResponse);
+}
+message DangKy {
+  int32 idLop = 1;
+  int32 idSinhVien = 2;
+    string ngayDangKy = 3;
+    string trangThai = 4;
+}
+message GetAllDangKiesRequest {}
+message GetAllDangKiesResponse {
+    repeated DangKy dangKies = 1;
+}
+message GetDangKyByIdRequest {
+  int32 idLop = 1;
+  int32 idSinhVien = 2;
+}
+message DangKyResponse {
+  int32 idLop = 1;
+  int32 idSinhVien = 2;
+    string ngayDangKy = 3;
+    string trangThai = 4;
+}
+message CreateDangKyRequest {
+  int32 idLop = 1;
+  int32 idSinhVien = 2;
+    string ngayDangKy = 3;
+    string trangThai = 4;
+}
+message CreateDangKyResponse {
+  bool success = 1;
+}
+message UpdateDangKyRequest {
+  int32 idLop = 1;
+  int32 idSinhVien = 2;
+    string ngayDangKy = 3;
+    string trangThai = 4;
+}
+message UpdateDangKyResponse {
+  bool success = 1;
+}
+message DeleteDangKyRequest {
+  int32 idLop = 1;
+  int32 idSinhVien = 2;
+}
+message DeleteDangKyResponse {
+  bool success = 1;
+}
