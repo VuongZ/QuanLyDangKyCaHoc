@@ -2,6 +2,7 @@ using System.Runtime.Serialization.DataContracts;
 using finalproject.Application.XuLyDangKi.Command;
 using finalproject.Application.XuLyDangKi.Query;
 using finalproject.Presentation.Protos;
+using FluentValidation;
 using Grpc.Core;
 using MediatR;
 
@@ -47,15 +48,30 @@ public class DangKyGrpcService : DangKyGrpc.DangKyGrpcBase
     }
     public override async Task<CreateDangKyResponse> CreateDangKy(CreateDangKyRequest request, ServerCallContext context )
     {
-        var command= new CreateDangKyCommand
+         try
+    {
+        var command = new CreateDangKyCommand
         {
-          IdLopHoc=request.IdLop,
-            IdSinhVien=request.IdSinhVien,
-            NgayDangKy=DateOnly.Parse(request.NgayDangKy),
-            TrangThai=request.TrangThai
+            IdLopHoc = request.IdLop,
+            IdSinhVien = request.IdSinhVien,
+            NgayDangKy = DateOnly.Parse(request.NgayDangKy),
+            TrangThai = request.TrangThai
         };
-        await _imediator.Send(command);
-        return new CreateDangKyResponse {Success=true};
+
+        var result = await _imediator.Send(command);
+
+        return new CreateDangKyResponse { Success = result };
+    }
+    catch (ValidationException ex)
+    {
+        // Gom tất cả lỗi validation thành 1 chuỗi
+        var errors = string.Join(", ", ex.Errors.Select(e => e.ErrorMessage));
+        throw new RpcException(new Status(StatusCode.InvalidArgument, errors));
+    }
+    catch (Exception ex)
+    {
+        throw new RpcException(new Status(StatusCode.Internal, ex.Message));
+    }
     }
     public override async Task<UpdateDangKyResponse> UpdateDangKy(UpdateDangKyRequest request,ServerCallContext context)
     {

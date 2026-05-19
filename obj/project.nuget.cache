@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "acTmRHk5HKc=",
+  "dgSpecHash": "CYB5GCi/ruM=",
   "success": true,
   "projectFilePath": "D:\\dotnet\\finalproject\\finalproject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vuong\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Vuong\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\Vuong\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
+    "C:\\Users\\Vuong\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.1\\fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
     "C:\\Users\\Vuong\\.nuget\\packages\\google.protobuf\\3.31.1\\google.protobuf.3.31.1.nupkg.sha512",
     "C:\\Users\\Vuong\\.nuget\\packages\\grpc.aspnetcore\\2.57.0\\grpc.aspnetcore.2.57.0.nupkg.sha512",
     "C:\\Users\\Vuong\\.nuget\\packages\\grpc.aspnetcore.server\\2.80.0\\grpc.aspnetcore.server.2.80.0.nupkg.sha512",
