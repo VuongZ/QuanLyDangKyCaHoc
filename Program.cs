@@ -1,5 +1,6 @@
 using finalproject.Application.Common;
 using finalproject.Application.Interfaces;
+using finalproject.Infrastructure.Messaging;
 using finalproject.Infrastructure.Repositories;
 using finalproject.Presentation.Data;
 using finalproject.Presentation.Service;
@@ -19,6 +20,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
 builder.Services.AddGrpcReflection();
+builder.Services.AddSingleton<RabbiMqPublisher>();
 builder.Services.AddMediatR(cfg => {
     cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
     cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));

@@ -150,3 +150,4 @@ D:\dotnet\finalproject\bin\Debug\net8.0\package-lock.json
 D:\dotnet\finalproject\obj\Debug\net8.0\finalproject.sourcelink.json
 D:\dotnet\finalproject\bin\Debug\net8.0\FluentValidation.dll
 D:\dotnet\finalproject\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\dotnet\finalproject\bin\Debug\net8.0\RabbitMQ.Client.dll

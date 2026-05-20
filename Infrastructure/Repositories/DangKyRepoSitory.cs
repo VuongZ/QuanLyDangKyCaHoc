@@ -20,10 +20,11 @@ namespace finalproject.Infrastructure.Repositories
         {
             return await _context.DangKy.FindAsync(idLop, idSinhVien);
         }
-        public async Task AddDangKyAsync(DangKy dangKy)
+        public async Task<bool> AddDangKyAsync(DangKy dangKy)
         {
             _context.DangKy.Add(dangKy);
             await _context.SaveChangesAsync();
+            return true;
         }
         public async Task UpdateDangKyAsync(DangKy dangKy)
         {
